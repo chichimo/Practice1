@@ -1,0 +1,24 @@
+<suite name="Hashim_TestSuite">
+	<test name="Exercise" preserve-order="true">
+		<parameter name = "username" value = "admin"/>
+		<parameter name = "password" value = "admin"/>
+		<parameter name = "fname" value = "Hashim"/>
+		<parameter name = "mname" value = "Saleh"/>
+		<parameter name = "lname" value = "Omer"/>
+		<parameter name = "Email" value = "hashimomer06@gmail.com"/>
+		<parameter name = "pNo" value = "6539879876"/>
+		<parameter name = "comment" value = "This is a new Automation tester"/>
+		
+		
+		
+		<classes>
+
+			<class name="testNG.ParameterXML">
+
+				<methods>
+					<include name="login" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>	

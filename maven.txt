@@ -1,0 +1,9 @@
+What is Maven?
+
+-	A build tool Automation
+-	
+
+download testNG from maven repository 
+and paste the code (xml) under dependency tag
+
+

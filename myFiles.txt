@@ -1,0 +1,18 @@
+
+	//ScreenShot 
+	
+	TakesScreenshot ts = (TakesScreenshot)driver;
+	File source = ts.getScreenshotAs(OutPutType.File);
+	FileUtils.copyfile(source,new File("./Screenshot/abc.png")
+
+	//Hover 
+
+	Actions act = new Actions (driver);
+	WebElement ele = driver.findElement(By.id()).click();
+	act.movetoElement(act).build().perform();
+
+	//
+	
+	TakesScreenshot ts = (TakesScreenshot)driver;
+	File source = ts.getScreenshotAs(OutPutType.File);
+	FileUtils.copyfile(source, new File("./abc/def.jpg));

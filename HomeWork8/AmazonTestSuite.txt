@@ -1,0 +1,36 @@
+<suite name="AmazonTestNG">
+	<test name="Amazon TestNG" preserve-order="true">
+		<classes>
+
+			<class name ="amazonTestNG.AmazonTestNG">
+
+				<methods>
+					<include name="Amazon1"/>
+					<include name="AmazonSearch"/>
+					<include name="DropDown"/>
+					<include name="Quiter"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>	
+------------------------------------------------RESULT OF THE TEST RUN-------------------------------------
+
+PASSED: Amazon1
+PASSED: AmazonSearch
+PASSED: DropDown
+PASSED: Quiter
+
+===============================================
+    Default test
+    Tests run: 4, Failures: 0, Skips: 0
+===============================================
+
+
+===============================================
+Default suite
+Total tests run: 4, Failures: 0, Skips: 0
+===============================================
+
+
+

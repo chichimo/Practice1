@@ -1,0 +1,63 @@
+package amazonTestNG;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import junit.framework.Assert;
+
+public class AmazonTestNG {
+	
+	public static WebDriver driver;
+	
+	
+	//annotations
+	
+	@Test
+public void Amazon1() {
+		
+		System.setProperty("webdriver.gecko.driver", "C://Users//hashi//Downloads//Drivers//geckodriver.exe");
+		
+		driver = new FirefoxDriver();
+		driver.get("http://www.amazon.com");
+
+}
+	@Test
+	public void AmazonSearch() throws InterruptedException {
+		String titleText = driver.getTitle();
+		String txtText = "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more";
+		
+		Assert.assertEquals(titleText, txtText);
+		Thread.sleep(4000);
+		
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("ipad");
+		driver.findElement(By.xpath("//*[@id=\"nav-search\"]/form/div[2]/div/input")).click();
+		Thread.sleep(3000);
+		
+		
+	}
+	
+	@Test
+	public void DropDown() throws InterruptedException {
+
+		
+		Select drpsort = new Select(driver.findElement(By.id("sort")));
+		drpsort.selectByVisibleText("Newest Arrivals");
+		Thread.sleep(4000);
+		
+	}
+	
+	@Test
+	public void Quiter() throws InterruptedException {
+		driver.quit();
+		
+	}
+
+
+}
